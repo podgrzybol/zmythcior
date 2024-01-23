@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dokument</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column; 
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: antiquewhite;
+        }
+
+        fieldset {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #e0e0e0;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            margin-bottom: 20px;
+        }
+
+        form {
+            background-color: #c0c0c0;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 250px;
+        }
+
+        legend {
+            font-family: fantasy;
+            color: #161f1c;
+        }
+
+        button {
+            background-color: #66cdaa;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        input {
+            margin-bottom: 10px;
+        }
+
+        
+        #zMyth {
+            font-size: 3em; 
+            margin-bottom: 20px;
+            font-family: fantasy;
+            color: #2e3b39;
+        }
+
+        #imagePlaceholder {
+            width: 200px; 
+            height: auto; 
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <fieldset>
+        <div id="zMyth">Z_Myth</div> <!-- Added Z_Myth -->
+		<img id="pzdro" src="giphy.webp" alt="real">
+        <legend>Form</legend>
+        <form>
+            <input type="text" id="imie" name="imie" pattern="[A-Za-zĄ-Źą-źĘ-ęÓóŻżŁłĆćŃńŚś]{3,20}" required> Name<br>
+            <input type="text" id="nazwisko" name="nazwisko" pattern="[A-Za-zĄ-Źą-źĘ-ęÓóŻżŁłĆćŃńŚś]{3,20}" required> Surname <br>
+            <input type="number" id="wiek" name="wiek" min="1" max="129" required> Age (1-129)<br>
+            <input name="tel1" type="tel" pattern="[0-9]{3}" placeholder="---" aria-label="3-digit area code" size="2" required> -
+            <input name="tel2" type="tel" pattern="[0-9]{3}" placeholder="---" aria-label="3-digit prefix" size="2" required> - 
+            <input name="tel3" type="tel" pattern="[0-9]{3}" placeholder="---" aria-label="3-digit number" size="2s" required> Confirm<br>
+            <button>Confirm</button>
+        </form>
+    </fieldset>
+</body>
+
+</html>
